@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    driverClassName: ${jdbc.driverClass}
+    url: ${jdbc.urlPath}
+    username: ${jdbc.usserName}
+    password: ${jdbc.passwd}
+  jpa:
+    database-platform: ${jdbc.dialect}
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: ${jdbc.showSQL}
+    properties:
+      hibernate:
+        format_sql: ${jdbc.showSQL}
