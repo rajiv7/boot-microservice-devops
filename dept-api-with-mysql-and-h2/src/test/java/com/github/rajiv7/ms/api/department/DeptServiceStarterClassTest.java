@@ -8,6 +8,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @ExtendWith(SpringExtension.class)
 @DataJpaTest
+@ActiveProfiles("test")
 public class DeptServiceStarterClassTest {
     @Test
     public void contextLoads(){}
