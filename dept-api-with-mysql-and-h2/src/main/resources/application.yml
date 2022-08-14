@@ -3,16 +3,16 @@ server:
 
 spring:
   datasource:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:13306/db_dept
-    username: rajiv
-    password: Ranjan07
+    driverClassName: ${jdbc.driverClass}
+    url: ${jdbc.urlPath}
+    username: ${jdbc.usserName}
+    password: ${jdbc.passwd}
   jpa:
-    database-platform: org.hibernate.dialect.MySQL8Dialect
+    database-platform: ${jdbc.dialect}
     generate-ddl: true
     hibernate:
-      ddl-auto: create
-    show-sql: true
+      ddl-auto: update
+    show-sql: ${jdbc.showSQL}
     properties:
       hibernate:
-        format_sql: true
+        format_sql: ${jdbc.showSQL}
